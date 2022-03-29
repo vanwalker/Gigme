@@ -1,0 +1,10 @@
+<h1 class="container">My offers</h1>
+
+<div class="container">
+  <ul>
+    <% @offers.each do |offer| %>
+      <li><%= link_to offer.title, offer_path(offer) %></li>
+    <% end %>
+  </ul>
+  <%= link_to 'New', new_offer_path %>
+</div>
