@@ -4,3 +4,20 @@
 <br>
 <%= notice %>
 </div>
+
+<h2><%= @offer.title %></h2>
+<ul class="offer-group">
+    <li class="list-group-item"><%= @offer.description %></li>
+    <li class="list-group-item"><%= @offer.availability %></li>
+    <li class="list-group-item"><%= @offer.event %></li>
+    <li class="list-group-item"><%= @offer.music_style %></li>
+    <li class="list-group-item"><%= @offer.price %></li>
+    <li class="list-group-item"><%= @offer.place %></li>
+
+</ul>
+
+
+<%= link_to 'Create an offer', new_offer_path(@offer), class: "btn btn-primary" %>
+
+<br>
+<br><%= link_to "Back",  root_path, class: "btn btn-primary" %>
