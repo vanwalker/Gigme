@@ -3,7 +3,7 @@
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
         <h3>Create a new offer </h3>
-        <%= simple_form_for @offer do |f| %>
+        <%= simple_form_for [@user, @offer] do |f| %>
           <%= f.input :title, placeholder: 'name of the band' %>
           <%= f.input :description, placeholder: 'description of the band' %>
           <%= f.input :availability, placeholder: 'your availabilities' %>
