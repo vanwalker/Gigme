@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def show
     set_user
-    # my_offers/ my_bookings = @offers.index
+    # my_offers/ my_bookings = all?
   end
 
   # def index
