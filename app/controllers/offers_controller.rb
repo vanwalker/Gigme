@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-    before_action :set_offer, only: [:show]
+  before_action :set_offer, only: [:show]
 
   def index
     @offers = Offer.all
@@ -10,6 +10,7 @@ class OffersController < ApplicationController
   end
 
   def show
+    set_offer
   end
 
   def create
@@ -29,6 +30,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:title, :user_id, :availability, :price, :place, :description)
+    params.require(:offer).permit(:title, :user_id, :availability, :price, :place, :description, :event, :music_style)
   end
 end

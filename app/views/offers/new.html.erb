@@ -1,1 +1,19 @@
-<%= render "form", offer: @offer %>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Create a new offer </h3>
+        <%= simple_form_for @offer do |f| %>
+          <%= f.input :title, placeholder: 'name of the band' %>
+          <%= f.input :description, placeholder: 'description of the band' %>
+          <%= f.input :availability, placeholder: 'your availabilities' %>
+          <%= f.input :price, placeholder: 'the price' %>
+          <%= f.input :place, placeholder: 'the place' %>
+          <%= f.input :event, collection: Offer::EVENTS %>
+          <%= f.input :music_style, collection: Offer::STYLE %>
+          <%= f.submit class: 'class: "btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
