@@ -2,8 +2,12 @@
   <br>
   <%= notice %>
   <br>
-  <%= simple_form_for(offer) do |f| %>
-    <%= f.input :title %>
+  <%= simple_form_for([@offer, @booking]) do |f| %>
+    <%= f.input :place %>
+    <%= f.input :price %>
+    <%= f.input :booking_start %>
+    <%= f.input :booking_end %>
+    <%= f.input :comment %>
     <%= f.submit %>
   <% end %>
 </div>
