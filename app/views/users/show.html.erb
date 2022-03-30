@@ -1,30 +1,7 @@
- <h1><div class="container">profile page</h1>
-  <%# <%= render "form", restaurant: @restaurant %>
-  <%# <%= render 'offers/show.html.erb' %>
-  <h1 class="container">My offers</h1>
-  <%= render template: "offers/index" %>
-  <%= @user.email %>
-  <%= link_to "Profile", current_user %>
-</div>
-<h2>profile </h2>
-<% @users.each do |user| %>
-<%= user.email  %>
-<% end %>
-<p id="notice"><%= notice %></p>
 
-<h1>user show page</h1>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Username:</strong>
-  <%= @user.name %>
-</p>
-
-<!-- include others, etc. -->
-
-<%= link_to 'Edit Profile', edit_user_path(@user) %> |
-<%#= link_to "Settings", edit_user_path %>
+<h2><%= @user.username %></h2>
+<ul class="user-group">
+    <li class="list-group-item"><%= @user.first_name %></li>
+    <li class="list-group-item"><%= @user.last_name %></li>
+    <li class="list-group-item"><%= @user.email %></li>
+</ul>
