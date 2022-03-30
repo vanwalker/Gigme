@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   # controllers: { registrations: 'users/registrations'}
   # resources :users, only: [:show]
   resources :offers do
-    resources :bookings
+    resources :bookings, only: [:new, :create]
   end
+  resources :bookings, only: [:show, :index]
   # resources :offers, except: [:new, :create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
