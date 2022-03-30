@@ -1,5 +1,12 @@
 class BookingsController < ApplicationController
   before_action :set_offer, only:[:new, :create]
+  def index
+    @bookings = Booking.all
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+  end
 
   def new
     # we need @offer in our `simple_form_for`
@@ -10,8 +17,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     # we need `offer_id` to associate booking with corresponding offer
     @booking.offer = @offer
+    @booking.user_id = current_user.id
+
     if @booking.save
-      redirect_to offer_path(@offer), notice: 'Saved!'
+      redirect_to bookings_path, notice: 'Saved!'
     else
       render :new
     end
@@ -30,6 +39,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:comment, :place, :offer_id, :user_id, :date_start, :date_end)
+    params.require(:booking).permit(:comment, :place, :offer_id, :user_id, :booking_start, :price, :booking_end)
   end
 end
