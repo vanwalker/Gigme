@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
-  devise_for :users # , :path_prefix => 'profile'
+  # , :path_prefix => 'profile'
+  devise_for :users, controllers: {
+    registrations: 'controllers/users_controller'
+  }
   # match '/:id', to: 'users#show', via: 'get'
   # controllers: { registrations: 'users/registrations'}
   # resources :users, only: [:show]
