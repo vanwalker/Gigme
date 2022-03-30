@@ -19,7 +19,7 @@ puts "Database cleaned"
 user_1 = User.create(email: "kelly@gmail.com", first_name: "kelly", last_name: "Le Goff", username: "Kel", password: "loulou")
 EVENTS = ["Anniversaire", "Fêtes Religieuses", "Bar/Restaurant/Hôtel", "Concert privé à domicile", "Festival", "Gala","Garden party", "Inauguration", "Mariage/Vin d'honneur/Cérémonie", "Soirée d'entreprise", "Autre"]
 STYLE = ["Bossa Nova/Latino","Chanson française", "Chorales/Gospel", "Classique", "Ensembles à cordes", "Funk/Soul/Disco", "Gipsy/Flamenco", "Guitaristes", "Hard rock/Metal", "Jazz/Jazz Manouche/Blues", "Mariachi", "Orchestres", "Pianistes","Pop/Rock", "Rap/Hip Hop", "Reggae", "Spectacles enfants", "Traditionnelle/Folk"]
-# url = "http://tmdb.lewagon.com/movie/top_rated"
+# file = URI.open('https://i.picsum.photos/id/690/1000/400.jpg?hmac=aXMS_vHUq1Mjy-3begyAJFn5zxWqUMeC2I0brdma1sU')
 100.times do |i|
   # puts "Importing movies from page #{i + 1}"
   # movies = JSON.parse(URI.open("#{url}?page=#{i + 1}").read)['results']
@@ -32,7 +32,7 @@ STYLE = ["Bossa Nova/Latino","Chanson française", "Chorales/Gospel", "Classique
       place: Faker::Address.city,
       event: EVENTS.sample,
       music_style: STYLE.sample,
-      user: user_1
+      user: user_1,
   )
 end
 puts "bands created"
