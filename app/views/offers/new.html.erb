@@ -11,6 +11,7 @@
           <%= f.input :place, placeholder: 'the place' %>
           <%= f.input :event, collection: Offer::EVENTS %>
           <%= f.input :music_style, collection: Offer::STYLE %>
+          <%= f.input :photo, as: :file %>
           <%= f.submit class: 'class: "btn btn-primary' %>
         <% end %>
       </div>
