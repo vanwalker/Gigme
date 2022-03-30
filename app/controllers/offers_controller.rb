@@ -18,7 +18,7 @@ class OffersController < ApplicationController
     @offer = Offer.new(offer_params)
     @offer.user = current_user
     if @offer.save
-      redirect_to new_user_offer_path(@offer), notice: 'Saved!'
+      redirect_to new_offer_path(@offer), notice: 'Saved!'
     else
       render :new
     end
