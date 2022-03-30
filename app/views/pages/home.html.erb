@@ -1,14 +1,7 @@
-<div class="home-banner">
-  <h1>Le Wagon</h1>
-  <%# <%= link_to 'Log out', destroy_user_session_path // appears when user logs in %>
-</div>
-
-<div class="container" >
-<%# <%= image_tag "GIGMElogo.png"%>
-  <div class="row justify-content-center">
-    <div class="buttons col-6">
-      <button> <%= link_to 'Looking for a Gig', new_user_registration_path %></button>
-    <button> <%= link_to 'Looking to Gig', offers_path %></button>
-    </div>
+<div class="home-banner d-flex">
+  <div class="container d-flex" >
+  <%# <%= image_tag "GIGMElogo.png"%>
+    <button class="btn-flat col-6"> <%= link_to 'Looking for a Gig', new_user_registration_path %></button>
+    <button class="btn-flat col-6"> <%= link_to 'Looking to Gig', offers_path %></button>
   </div>
 </div>
