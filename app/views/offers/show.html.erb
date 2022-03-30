@@ -6,6 +6,9 @@
 </div>
 
 <h2><%= @offer.title %></h2>
+<ul class="list-group">
+<%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill %>
+
 <ul class="offer-group">
     <li class="list-group-item"><%= @offer.description %></li>
     <li class="list-group-item"><%= @offer.availability %></li>
@@ -13,7 +16,6 @@
     <li class="list-group-item"><%= @offer.music_style %></li>
     <li class="list-group-item"><%= @offer.price %></li>
     <li class="list-group-item"><%= @offer.place %></li>
-
 </ul>
 
 
