@@ -15,14 +15,12 @@
     <div class="list-group-item"><%= @offer.music_style %></div>
     <div class="list-group-item"><%= @offer.price %></div>
     <div class="list-group-item"><%= @offer.place %></div>
-
-    <div class="btn-yours">
-      <%= link_to 'Réserver ce groupe', new_offer_booking_path(@offer), class: 'no-text-decoration'%>
-    </div>
-
-      <%= link_to root_path, class: 'no-text-decoration' do%>
-        <div class='btn-yours no-text-decoration'>Accueil</div>
-      <% end %>
+    <%= link_to new_offer_booking_path(@offer), class: 'no-text-decoration' do%>
+      <div class='btn-yours no-text-decoration'>Réserver ce groupe</div>
+    <% end %>
+    <%= link_to root_path, class: 'no-text-decoration' do%>
+      <div class='btn-yours no-text-decoration'>Accueil</div>
+    <% end %>
 
     <%# <%= link_to 'Create an offer', new_offer_path(), class: "btn btn-primary" %>
   </div>
