@@ -56,3 +56,23 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.btn-yours {
+  width: 130px;
+  height: 40px;
+  border: 2px solid #000;
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.btn-yours:hover{
+  border: 2px solid lightslategray;
+  background: $yellow;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+
+}

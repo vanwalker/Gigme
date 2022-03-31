@@ -23,3 +23,8 @@ body {
   padding: 3em;
   position: sticky;
 }
+
+.container{
+  padding-right: var(--bs-gutter-x, 8.75rem);
+  padding-left: var(--bs-gutter-x, 8.75rem);
+}
