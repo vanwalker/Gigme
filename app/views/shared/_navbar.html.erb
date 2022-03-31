@@ -20,8 +20,10 @@
               <li class="nav-item dropdown">
                 <i class="fa-regular fa-user fa-lg avatar dropdown-toggle avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <%= link_to "Mes bookings", bookings_path, class: "dropdown-item" %>
-                  <%= link_to "Mes offres", offer_path(current_user.offer), class: "dropdown-item" %>
+                  <%= link_to "Mes bookings", bookings_path, class: "dropdown-item"  %>
+                  <% if current_user.offer != nil %>
+                    <%= link_to "Mes offres", offer_path(current_user.offer), class: "dropdown-item" %>
+                  <% end %>
                   <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                 </div>
               </li>

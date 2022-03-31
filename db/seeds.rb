@@ -40,8 +40,6 @@ STYLE = ["Bossa Nova/Latino","Chanson française", "Chorales/Gospel", "Classique
       title: Faker::Music.band,
       description: Faker::Lorem.paragraphs,
       price: rand(100..1000),
-      place: Faker::Address.city,
-      event: EVENTS.sample,
       music_style: STYLE.sample,
       user: user_1
       # photo: IMAGES.sample
