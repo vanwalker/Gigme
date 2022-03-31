@@ -1,17 +1,16 @@
 // Specific CSS for your home-page
 body {
-  height: 100vh;
   font-family: $font-family;
 }
 
-.d-flex {
+.landing {
   height: 100%;
   background-image: image-url("GIGMElogo.png");
-  justify-content: space-between;
+  // justify-content: space-between;
   padding-block: 35%;
 }
 
-.btn {
+.route {
   text-decoration: none;
   font-family: $font-family;
   color: $yellow;
@@ -19,4 +18,5 @@ body {
   border-radius: $border-radius;
   margin: 3em;
   padding: 3em;
+  position: sticky;
 }

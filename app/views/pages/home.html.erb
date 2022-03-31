@@ -2,11 +2,86 @@
   <%# <%= link_to 'Log out', destroy_user_session_path // appears when user logs in %>
   <%# style = "background-image: url('../images/GIGMElogo.png')" %>
   <%# <% image_tag "GIGMElogo.png" %>
-  <div class = "d-flex">
-      <%= link_to 'Looking for a Gig', new_user_registration_path, :class => "btn"%>
-      <%= link_to 'Looking to Gig', offers_path, :class => "btn"%>
+  <div class = "landing d-flex justify-content-around">
+      <%= link_to 'Looking for a Gig', new_user_registration_path, :class => "route"%>
+      <%= link_to 'Looking to Gig', offers_path, :class => "route"%>
   </div>
   <%# type="button" class="btn btn-link btn-lg text-decoration-none"
   class="btn btn-link btn-lg text-decoration-none" %>
   <p>lorem ipsum</p>
+  <div class = "information">
+  <h6>Mise en relation peer-to-peer simple, rapide, entre particuliers</h6>
+  </div>
+
 </div>
+
+
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
+  <!-- Grid container -->
+  <div class="container pt-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <!-- Github -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">Gigme.fr</a>
+  </div>
+  <!-- Copyright -->
+</footer>
