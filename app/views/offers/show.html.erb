@@ -1,31 +1,27 @@
 <div class="container">
- SHOW OFFERS
+  <div class="card text-center">
+    <div class="card-header">
+      <h2><%= @offer.title %></h2>
+      <%= notice %>
+      <% if  @offer.photo.attached? %>
+        <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill, class: 'center-img' %>
+      <%else %>
+        <%= image_tag "OIP.jpg", height: 300, width: 400, crop: :fill, class: 'center-img' %>
+      <% end %>
+    </div>
+    <div class="list-group-item"><%= @offer.description %></div>
+    <div class="list-group-item"><%= @offer.availability_start %></div>
+    <div class="list-group-item"><%= @offer.availability_end %></div>
+    <div class="list-group-item"><%= @offer.music_style %></div>
+    <div class="list-group-item"><%= @offer.price %></div>
+    <div class="list-group-item"><%= @offer.place %></div>
+    <%= link_to new_offer_booking_path(@offer), class: 'no-text-decoration' do%>
+      <div class='btn-yours no-text-decoration'>Réserver ce groupe</div>
+    <% end %>
+    <%= link_to root_path, class: 'no-text-decoration' do%>
+      <div class='btn-yours no-text-decoration'>Accueil</div>
+    <% end %>
 
-<br>
-<%= notice %>
+    <%# <%= link_to 'Create an offer', new_offer_path(), class: "btn btn-primary" %>
+  </div>
 </div>
-
-<h2><%= @offer.title %></h2>
-<ul class="list-group">
-<% if  @offer.photo.attached? %>
-<%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill %>
-<%else %>
-<%= image_tag "OIP.jpg", height: 300, width: 400, crop: :fill %>
-<% end %>
-
-<ul class="offer-group">
-    <li class="list-group-item"><%= @offer.description %></li>
-    <li class="list-group-item"><%= @offer.availability %></li>
-    <li class="list-group-item"><%= @offer.event %></li>
-    <li class="list-group-item"><%= @offer.music_style %></li>
-    <li class="list-group-item"><%= @offer.price %></li>
-    <li class="list-group-item"><%= @offer.place %></li>
-</ul>
-
-<%= link_to 'Book that offer', new_offer_booking_path(@offer), class: "btn btn-primary" %>
-
-
-<%= link_to 'Create an offer', new_offer_path(), class: "btn btn-primary" %>
-
-<br>
-<br><%= link_to "Back",  root_path, class: "btn btn-primary" %>
