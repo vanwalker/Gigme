@@ -1,4 +1,22 @@
 // Specific CSS for your home-page
-.button {
+body {
+  height: 100vh;
+  font-family: $font-family;
+}
+
+.d-flex {
+  height: 100%;
+  background-image: image-url("GIGMElogo.png");
+  justify-content: space-between;
+  padding-block: 35%;
+}
+
+.btn {
   text-decoration: none;
+  font-family: $font-family;
+  color: $yellow;
+  background-color: $default-backgroud;
+  border-radius: $border-radius;
+  margin: 3em;
+  padding: 3em;
 }

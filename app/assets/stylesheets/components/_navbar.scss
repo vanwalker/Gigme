@@ -10,3 +10,31 @@
 .navbar-lewagon .navbar-brand img {
   width: 60px;
 }
+
+
+
+
+.btn1 {
+  text-decoration: none;
+  font-family: $font-family;
+  color: $yellow;
+  background-color: $default-backgroud;
+  border-radius: $border-radius;
+  margin-top: 2em;
+  margin-right: 2em;
+  &:hover {
+    color: black;
+  }
+}
+
+a:hover {
+  color: black;
+  background-color:white !important;
+}
+
+// .dropdown-item {
+//   &:hover {
+//     background-color: none;
+//     color: black;
+//   }
+// }
