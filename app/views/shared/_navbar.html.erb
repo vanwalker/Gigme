@@ -1,73 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- Container wrapper -->
-  <div class="container-fluid">
-    <!-- Toggle button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <% if user_signed_in? %>
-            <li class="nav-item dropdown">
-              <%# image_tag(current_user.avatar(:small)), user_path(current_user) A UTILISER POUR ADAPTER L'AVATAR AU CURRENT USER%>
-                <%= link_to "curren_user avatar", "#", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
-                    <%= link_to "My Bookings", bookings_path, class: "dropdown-item" %>
-                    <%= link_to "Settings", "#", class: "dropdown-item" %>
-                    <%= link_to "Messages", "#", class: "dropdown-item" %>
-                    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-                  </div>
-            </li>
-            <!-- icons messages, alertes -->
-            <li class="nav-item dropdown me-3 me-lg-1">
-              <a
-                class="nav-link dropdown-toggle hidden-arrow"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-mdb-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i class="fas fa-comments fa-lg"></i>
-                <span class="badge rounded-pill badge-notification bg-danger">12</span>
-              </a>
-            </li>
-              <a
-                class="nav-link dropdown-toggle hidden-arrow"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-mdb-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i class="fas fa-bell fa-lg"></i>
-                <span class="badge rounded-pill badge-notification bg-danger">3</span>
-              </a>
-            </li>
-          <% else %> <!-- Login link -->
-            <li class="nav-item">
-                <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    <!-- Collapsible wrapper --> <!-- search and home -->
-      <div
-        class="collapse navbar-collapse justify-content-row"
-        id="navbarCenteredExample"
+<nav>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+      <%# <i class="fa-solid fa-user fa-lg" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </i> %>
+    <div></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <% if user_signed_in? %>
+                <%= link_to user_path(current_user), class: "navbar-brand" do %>
+                  <i class="fa-regular fa-user fa-lg"></i>
+                <% end %>
+                  <%= link_to root_path, class: "navbar-brand" do %>
+                  <i class="fa-solid fa-house fa-lg"></i>
+                <% end %>
+              <li class="nav-item dropdown">
+                <i class="fa-regular fa-user fa-lg avatar dropdown-toggle avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "Mes bookings", bookings_path, class: "dropdown-item" %>
+                  <%= link_to "Mes offres", offers_path, class: "dropdown-item" %>
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                </div>
+              </li>
+            <% else %>
+              <!--li class="nav-item"-->
+                <%= link_to new_user_registration_path, class: "navbar-brand" do %>
+                  <span class = "Signup">Se connecter ou Créer un compte</span>
+                <% end %>
+              <!--/li-->
+            <% end %>
+          </ul>
 
-      >
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="find info..." aria-label="Search">
-        <button class="btn my-2 my-sm-0" >Search</button>
-      </form>
-      <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <%= link_to "Home", root_path%>
-          </li>
-        </ul>
-      <!-- Collapsible wrapper -->
+        </div>
+      </div>
     </div>
-  <!-- Container wrapper -->
+  </div>
 </nav>
