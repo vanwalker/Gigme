@@ -1,15 +1,33 @@
-<div class="container">
-  <br>
-  <%= notice %>
-  <br>
-  <%= simple_form_for([@offer, @booking]) do |f| %>
-    <%= f.input :place %>
-    <%= f.input :price %>
-    <%= f.input :booking_start %>
-    <%= f.input :booking_end %>
-    <%= f.input :comment %>
-    <div class="container d-flex justify-content-center">
-    <%= f.submit 'Réserver', class: 'btn-yours' %>
+<div class="container py-5 d-flex justify-content-between">
+    <div class="grid">
+      <div class="g-col-3 g-start-2">
+        <div class="card-header text-center">
+          <h2><%= @offer.title %></h2>
+          <%= notice %>
+          <% if  @offer.photo.attached? %>
+            <%= cl_image_tag @offer.photo.key, height: 150, width: 200, crop: :fill %>
+          <%else %>
+            <%= image_tag "OIP.jpg", height: 150, width: 200, crop: :fill %>
+          <% end %>
+          <br>
+          <br>
+          <p><%= @offer.music_style %></p>
+          <p><%= @offer.price.to_i %> € </p>
+        </div>
+        <br>
+          <%= notice %>
+        <br>
+      </div>
     </div>
-  <% end %>
+    <div class="g-col-4 g-start-6 text-center">
+      <%= simple_form_for([@offer, @booking]) do |f| %>
+      <%= f.input :booking_start, label: "date de début de la prestation", as: :date, html5: true %>
+      <%= f.input :booking_end, label: "date de fin de la prestation", as: :date, html5: true %>
+      <%= f.input :place, label: "Lieu de la prestation", placeholder: 'lieu de la prestation' %>
+      <%= f.input :comment, label: "Commentaire", placeholder: 'des précisions à apporter ? ' %>
+      <div class="container d-flex justify-content-center">
+        <%= f.submit 'Réserver', class: 'btn-yours' %>
+        <% end %>
+      </div>
+    </div>
 </div>
