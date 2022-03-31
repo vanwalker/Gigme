@@ -19,9 +19,14 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
   </div>
-
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Upload your avatar</label>
+    <input class="form-control" type="file" id="formFile">
+  </div>
   <div class="form-actions">
     <%= f.button :submit, "Sign up" %>
+    <%# <%= f.submit "Sign up", formaction: new_user_registration_path %>
+    <%= f.submit "Special Action", formaction: root_path %>
     <p>Etes-vous musicien? Cliquez ici !</p>
     <%# <%= f.submit "Special Action", formaction: profile_path %>
   </div>
