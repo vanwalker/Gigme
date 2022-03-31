@@ -1,10 +1,15 @@
 // Define variables for your color scheme
 
 // For example:
-$red: #FD1015;
-$blue: #0D6EFD;
-$yellow: #FFC65A;
-$orange: #E67E22;
-$green: #1EDD88;
-$gray: #0E0000;
-$light-gray: #F4F4F4;
+$yellow: rgb(255, 222, 90);
+$back: #000000;
+$white: white;
+
+$btn-background-color: rgb(255, 222, 90);
+$btn-font-color: rgb(255, 255, 255);
+
+$dark-font: rgb(21, 56, 97);
+$light-font: rgb(77, 127, 185);
+
+$default-backgroud: white;
+$light-background: rgb(206, 205, 159);

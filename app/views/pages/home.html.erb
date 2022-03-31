@@ -1,7 +1,12 @@
-<div class="home-banner d-flex">
-  <div class="container d-flex" >
-  <%# <%= image_tag "GIGMElogo.png"%>
-    <button class="btn-flat col-6"> <%= link_to 'Looking for a Gig', new_user_registration_path %></button>
-    <button class="btn-flat col-6"> <%= link_to 'Looking to Gig', offers_path %></button>
+<div class="routing-page home-banner" >
+  <%# <%= link_to 'Log out', destroy_user_session_path // appears when user logs in %>
+  <%# style = "background-image: url('../images/GIGMElogo.png')" %>
+  <%# <% image_tag "GIGMElogo.png" %>
+  <div class = "d-flex">
+      <%= link_to 'Looking for a Gig', new_user_registration_path, :class => "btn"%>
+      <%= link_to 'Looking to Gig', offers_path, :class => "btn"%>
   </div>
+  <%# type="button" class="btn btn-link btn-lg text-decoration-none"
+  class="btn btn-link btn-lg text-decoration-none" %>
+  <p>lorem ipsum</p>
 </div>

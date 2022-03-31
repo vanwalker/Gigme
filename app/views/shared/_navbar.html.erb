@@ -1,9 +1,13 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-fixed-top navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "GIGMElogo.png"%>
+    <%= link_to root_path, class: "navbar-brand" do %>
+    <%# image_tag(participant.user.profile_pic.url(:small), home_path(participant.user)) POUR ADAPTER AVATAR DES USERS%>
+    <%# <%= link_to root_path do %>
+      <%= image_tag "GIGMElogo.png", id:"logo" %>
+    <%# <% end %>
+      <%# <%= image_tag "GIGMElogo.png", link_to "Bookings", bookings_path, class: "nav-link" %>
     <% end %>
-
+    <h3>Mise en relation peer-to-peer simple, rapide, entre particuliers</h3>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,12 +18,12 @@
           <%# <li class="nav-item active">
             <%= link_to 'Log in', new_user_session_path </li> %>
           <li class="nav-item">
-            <%= link_to "Bookings", bookings_path, class: "nav-link" %>
+            <%= link_to "Profile", user_path(current_user), class: "dropdown-item", class: "btn" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Profile", "#", class: "dropdown-item" %>
+              <%= link_to "Bookings", bookings_path, class: "dropdown-item" %>
               <%= link_to "Settings", "#", class: "dropdown-item" %>
               <%= link_to "Messages", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
