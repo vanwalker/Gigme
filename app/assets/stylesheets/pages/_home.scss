@@ -1,13 +1,16 @@
 // Specific CSS for your home-page
 body {
   font-family: $font-family;
+  // text-align: ;
 }
 
-.landing {
+.home-container {
   height: 100%;
   background-image: image-url("GIGMElogo.png");
+  background-position: center;
   // justify-content: space-between;
-  padding-block: 35%;
+  margin-top: 4%;
+  padding-block: 25%;
 }
 
 .route {
