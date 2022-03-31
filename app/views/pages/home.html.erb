@@ -1,14 +1,19 @@
-<div class="home-banner">
-  <h1>Le Wagon</h1>
+<div class="routing-page home-banner" >
   <%# <%= link_to 'Log out', destroy_user_session_path // appears when user logs in %>
-</div>
-
-<div class="container" >
-<%# <%= image_tag "GIGMElogo.png"%>
-  <div class="row justify-content-center">
-    <div class="buttons col-6">
-      <button> <%= link_to 'Looking for a Gig', new_user_registration_path %></button>
-    <button> <%= link_to 'Looking to Gig', offers_path %></button>
+  <%# style = "background-image: url('../images/GIGMElogo.png')" %>
+  <%# <% image_tag "GIGMElogo.png" %>
+  <div class="home-container position-relative">
+    <div class = "d-flex justify-content-around position-relative">
+      <%= link_to 'Looking for a Gig', new_user_registration_path, :class => "route"%>
+      <%= link_to 'Looking to Gig', offers_path, :class => "route"%>
     </div>
   </div>
+
+  <%# type="button" class="btn btn-link btn-lg text-decoration-none"
+  class="btn btn-link btn-lg text-decoration-none" %>
+  <p>lorem ipsum</p>
+  <div class = "information">
+  <h6>Mise en relation peer-to-peer simple, rapide, entre particuliers</h6>
+  </div>
+
 </div>

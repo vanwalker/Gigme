@@ -1,5 +1,5 @@
-<h2>Sign up</h2>
-
+<div class = "container">
+<h5>Welcome to our site</h2>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -18,13 +18,23 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%# <%= cf.check_box(:musician) %> %>
+    <%# <%= check_box_tag :musician, checked = true %> %>
+    <%# <%= label_tag :user %> %>
   </div>
-
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Upload your avatar</label>
+    <input class="form-control" type="file" id="formFile">
+  </div>
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-    <p>Etes-vous musicien? Cliquez ici !</p>
+    <p>Etes-vous musicien?</p>
+     <%# <%= check_box_tag :musicusersian, value, true %> %>
+     <%= f.button :submit, "Sign up" %>
+    <%# <%= f.submit "Sign up", formaction: new_user_registration_path %>
+    <%# <%= f.submit "Special Action", formaction: root_path %> %>
     <%# <%= f.submit "Special Action", formaction: profile_path %>
   </div>
 <% end %>
+</div>
 
 <%# <%= render "devise/shared/links" %>

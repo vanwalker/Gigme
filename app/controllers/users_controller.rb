@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     # my_offers/ my_bookings = all?
   end
 
-  # def index
-  #   @user = User.all
-  # end
+  def musician?
+    current_user.musician = true
+  end
 
   # def create
   #   @user = User.new(user_params)
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
   #   @offer = Offer.find(params[:id])
   # end
 
-  # def user_params
-  #   params.require(:user).permit(:name, :photo)
-  # end
+  def user_params
+    params.require(:user).permit(:musician)
+  end
 end

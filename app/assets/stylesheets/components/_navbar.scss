@@ -1,12 +1,36 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 60px;
+
+
+
+.btn {
+  text-decoration: none;
+  font-family: $font-family;
+  color: $yellow;
+  background-color: $default-backgroud;
+  border-radius: $border-radius;
+  margin-top: 2em;
+  margin-right: 2em;
+  &:hover {
+    color: black;
+  }
 }
+
+a:hover {
+  color: black;
+  background-color:white !important;
+}
+
+// .dropdown-item {
+//   &:hover {
+//     background-color: none;
+//     color: black;
+//   }
+// }

@@ -1,4 +1,25 @@
 // Specific CSS for your home-page
-.button {
+body {
+  font-family: $font-family;
+  // text-align: ;
+}
+
+.home-container {
+  height: 100%;
+  background-image: image-url("GIGMElogo.png");
+  background-position: center;
+  // justify-content: space-between;
+  margin-top: 4%;
+  padding-block: 25%;
+}
+
+.route {
   text-decoration: none;
+  font-family: $font-family;
+  color: $yellow;
+  background-color: $default-backgroud;
+  border-radius: $border-radius;
+  margin: 3em;
+  padding: 3em;
+  position: sticky;
 }
