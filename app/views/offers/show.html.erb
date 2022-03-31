@@ -3,24 +3,27 @@
     <div class="card-header">
       <h2><%= @offer.title %></h2>
       <%= notice %>
-      <ul class="list-group">
       <% if  @offer.photo.attached? %>
-        <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill, class: 'center-img' %>
       <%else %>
-        <%= image_tag "OIP.jpg", height: 300, width: 400, crop: :fill %>
+        <%= image_tag "OIP.jpg", height: 300, width: 400, crop: :fill, class: 'center-img' %>
       <% end %>
     </div>
-    <ul class="offer-group">
-        <li class="list-group-item"><%= @offer.description %></li>
-        <li class="list-group-item"><%= @offer.availability_start %></li>
-        <li class="list-group-item"><%= @offer.availability_end %></li>
-        <li class="list-group-item"><%= @offer.music_style %></li>
-        <li class="list-group-item"><%= @offer.price %></li>
-        <li class="list-group-item"><%= @offer.place %></li>
-    </ul>
+    <div class="list-group-item"><%= @offer.description %></div>
+    <div class="list-group-item"><%= @offer.availability_start %></div>
+    <div class="list-group-item"><%= @offer.availability_end %></div>
+    <div class="list-group-item"><%= @offer.music_style %></div>
+    <div class="list-group-item"><%= @offer.price %></div>
+    <div class="list-group-item"><%= @offer.place %></div>
 
-    <%= link_to 'Réserver ce groupe', new_offer_booking_path(@offer), class: "btn btn-primary" %>
-    <%= link_to "Accueil",  root_path, class: "btn btn-primary" %>
+    <div class="btn-yours">
+      <%= link_to 'Réserver ce groupe', new_offer_booking_path(@offer), class: 'no-text-decoration'%>
+    </div>
+
+      <%= link_to root_path, class: 'no-text-decoration' do%>
+        <div class='btn-yours no-text-decoration'>Accueil</div>
+      <% end %>
+
     <%# <%= link_to 'Create an offer', new_offer_path(), class: "btn btn-primary" %>
   </div>
 </div>
