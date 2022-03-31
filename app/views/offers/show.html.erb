@@ -15,16 +15,17 @@
 
 <ul class="offer-group">
     <li class="list-group-item"><%= @offer.description %></li>
-    <li class="list-group-item"><%= @offer.availability %></li>
+    <li class="list-group-item"><%= @offer.availability_start %></li>
+    <li class="list-group-item"><%= @offer.availability_end %></li>
     <li class="list-group-item"><%= @offer.music_style %></li>
     <li class="list-group-item"><%= @offer.price %></li>
     <li class="list-group-item"><%= @offer.place %></li>
 </ul>
 
-<%= link_to 'Book that offer', new_offer_booking_path(@offer), class: "btn btn-primary" %>
+<%= link_to 'Réserver ce groupe', new_offer_booking_path(@offer), class: "btn btn-primary" %>
 
 
-<%= link_to 'Create an offer', new_offer_path(), class: "btn btn-primary" %>
+<%# <%= link_to 'Create an offer', new_offer_path(), class: "btn btn-primary" %>
 
 <br>
-<br><%= link_to "Back",  root_path, class: "btn btn-primary" %>
+<br><%= link_to "Accueil",  root_path, class: "btn btn-primary" %>
