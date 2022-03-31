@@ -1,6 +1,6 @@
 
 
-<div class="cover mb-4 d-flex align-items-center justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('image_band2.jpg') %>)">
+<div class="cover mb-4 d-flex align-items-center justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= Offer::IMAGES.sample %>)">
   <div class="text-center text-white">
     <h1>De super groupes de musique à booker</h1>
     <h3 class="typed-js" data-controller="typed-js"></h3>
@@ -12,7 +12,7 @@
       <% @offers.each do |offer| %>
         <div class="co-12 col-sm-6 col-md-4">
           <%= link_to offer_path(offer), class: "text-decoration-none" do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('hj.jpg') %>)">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= Offer::IMAGES.sample %>)">
 
               <%= offer.title %>
             </div>
