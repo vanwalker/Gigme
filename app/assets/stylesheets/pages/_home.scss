@@ -4,7 +4,11 @@ body {
   // text-align: ;
 }
 
-.home-container {
+.routing-page {
+  height: 600px;
+}
+
+.routes {
   height: 100%;
   background-image: image-url("GIGMElogo.png");
   background-position: center;
@@ -13,13 +17,82 @@ body {
   padding-block: 25%;
 }
 
+
+.wrapper{
+  position: relative;
+  height: 100%;
+  background-image: image-url("GIGMElogo.png");
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper{
+  position: relative;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: relative;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #101311;
+  transition: all .35s;
+}
+
+
 .route {
+  // text-decoration: none;
+  // font-family: $font-family;
+  // color: $yellow;
+  // background-color: $default-backgroud;
+  // border-radius: $border-radius;
+  // // margin: 3em;
+  // // padding: 3em;
+  // position: sticky;
+
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
   text-decoration: none;
-  font-family: $font-family;
-  color: $yellow;
-  background-color: $default-backgroud;
-  border-radius: $border-radius;
-  margin: 3em;
-  padding: 3em;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+
+  &:hover{
+    width: 200px;
+    border: 3px solid #2ecc71;
+    background: transparent;
+    color: #2ecc71;
+  }
+
+  &:hover + .icon{
+    border: 3px solid #2ecc71;
+    right: -25%;
+  }
+
+}
+
+footer {
   position: sticky;
+  bottom:0;
 }
