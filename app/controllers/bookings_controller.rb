@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
     @offer = Offer.find(@booking.offer_id)
+    @user = current_user
   end
 
   def new
@@ -22,7 +23,8 @@ class BookingsController < ApplicationController
     @booking.user_id = current_user.id
 
     if @booking.save
-      redirect_to bookings_path, notice: 'Saved!'
+      redirect_to bookings_path
+      # notice: 'Saved!'
     else
       render :new
     end
