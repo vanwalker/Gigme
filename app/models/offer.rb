@@ -7,6 +7,13 @@ class Offer < ApplicationRecord
   # validates :event, inclusion: { in: EVENTS }
   validates :music_style, inclusion: { in: STYLE }
 
+  include PgSearch::Model
+  pg_search_scope :search_by_title_and_music,
+    against: [ :title, :music_style ],
+    using: {
+      tsearch: { prefix: true }
+  }
+
   IMAGES = ["https://res.cloudinary.com/mavana/image/upload/v1648647740/gig/the-last-waltz-concert-the-band-01_d3rfhr.jpg",
      "https://res.cloudinary.com/mavana/image/upload/v1648647722/gig/people-music-band-acoustic-guitar-keyboard-drums-isolated-white-background-189949646_aoslqs.jpg",
      "https://res.cloudinary.com/mavana/image/upload/v1648647706/gig/joan-jett-runaways_pi5znw.jpg",

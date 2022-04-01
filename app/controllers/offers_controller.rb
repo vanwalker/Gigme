@@ -2,7 +2,12 @@ class OffersController < ApplicationController
   before_action :set_offer, only: [:show]
 
   def index
-    @offers = Offer.all
+    if params[:query].present?
+      @offers = Offer.search_by_title_and_music(params[:query])
+    else
+      @offers = Offer.all
+    end
+    params[:query] = ""
   end
 
   def new
