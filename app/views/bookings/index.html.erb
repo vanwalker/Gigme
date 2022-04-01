@@ -1,6 +1,5 @@
-<h1>My bookings</h1>
-
 <div class="container">
+<h1> Mes Réservations</h1>
   <ul>
     <% @bookings.each do |booking| %>
       <li><%= link_to booking.place, booking_path(booking) %></li>
@@ -8,3 +7,23 @@
   </ul>
   <%# <%= link_to 'Offers', offers_path(@offer) %>
 </div>
+
+<%# <div class="container py-5">
+<h1>Mes Réservations</h1>
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <div class="row">
+      <% @bookings.each do |booking| %>
+        <%# <div class="co-12 col-sm-6 col-md-4">
+            <%# <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= Offer::IMAGES.sample %>
+              <%# <%= link_to booking.place, booking_path(booking), class: "text-decoration-none" do %>
+              <%# <%= @booking.offer.title %>
+              <%# <%= @booking.offer.price %>
+              <%# <%= @booking.user.first_name %>
+              <%# <%= @booking.user.last_name %>
+            <%# </div>
+          <% end %>
+        <%# </div>
+      <% end %>
+    <%# </div>
+  </div>
+</div> %>

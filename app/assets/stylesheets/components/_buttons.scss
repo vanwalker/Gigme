@@ -66,6 +66,10 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 10px auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 2em;
+    margin-top: 2em;
+
 }
 
 .btn-yours:hover{
@@ -73,7 +77,12 @@
   background: $yellow;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: white;
+  text-decoration: none;
+  font-family: "Spartan", sans-serif;
+  color: #ffde5a;
+  background-color: white;
+  border-radius: 2em;
+  margin-top: 2em;
 
 }
 
@@ -81,4 +90,7 @@
   text-decoration: none;
   color:black;
   padding-top: 6px;
+}
+.btn-center{
+  text-align: center;
 }

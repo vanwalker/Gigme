@@ -1,6 +1,8 @@
 <div class="card-header p-3 mb-2 bg-dark text-white row" >
+
       <%= notice %>
       <div class= "place col-lg-6  col-12">
+
           <% if  offer.photo.attached? %>
           <%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill, class: 'center-img' %>
           <%else %>
