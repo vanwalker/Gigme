@@ -1,7 +1,7 @@
 <div class="container-md">
+      <%= notice %>
   <div class="card text-center">
     <div class="card-header p-3 mb-2 bg-dark text-white row" >
-      <%= notice %>
       <div class= "container col-lg-6  col-12">
         <% if  @offer.photo.attached? %>
         <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill, class: 'center-img' %>
@@ -31,4 +31,5 @@
     </div>
     <%# <%= link_to 'Create an offer', new_offer_path(), class: "btn btn-primary" %>
   </div>
+</div>
 </div>
