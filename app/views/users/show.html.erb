@@ -16,6 +16,7 @@
   </div>
   <% if current_user.offer != nil %>
    <h2><%= @offer.title %></h2>
+   <%= render 'offers/card', offer: @offer %>
    <% end %>
   </div>
 </div>
