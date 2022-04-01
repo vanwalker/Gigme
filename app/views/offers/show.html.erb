@@ -1,14 +1,16 @@
 <div class = "container">
   <p>Vous avez crée 1 offre : </p>
+
 <div class="place-md">
       <%= notice %>
+
   <div class="card text-center">
     <div class="card-header p-3 mb-2 bg-dark text-white row" >
       <div class= "place col-lg-6  col-12">
         <% if  @offer.photo.attached? %>
         <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill, class: 'center-img' %>
         <%else %>
-        <%= image_tag "OIP.jpg", height: 300, width: 400, crop: :fill, class: 'center-img' 'card-img-top' %>
+        <%= image_tag Offer::IMAGES.sample, height: 300, width: 400, crop: :fill, class: 'center-img' 'card-img-top' %>
         <% end %>
       </div>
         <div class= "place col-lg-6  col-12">
@@ -27,7 +29,7 @@
         <%= link_to root_path, class: 'no-text-decoration' do%>
           <div class='btn-yours no-text-decoration'>Accueil</div>
         <% end %>
-        <%= link_to offer_path, class: 'no-text-decoration' do%>
+        <%= link_to offers_path, class: 'no-text-decoration' do%>
           <div class='btn-yours no-text-decoration'>Un autre groupe ? </div>
       <% end %>
     </div>

@@ -12,13 +12,15 @@
     class: "form-control",
     placeholder: "Find a Band"
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <div class="btn-center">
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  </div>
 <% end %>
 <div class="container py-5">
   <div class="d-flex align-items-center justify-content-between mb-3">
     <div class="row">
       <% @offers.each do |offer| %>
-        <div class="co-12 col-sm-6 col-md-4">
+        <div class="co-12 col-sm-6 col-md-4 mini-width">
           <%= link_to offer_path(offer), class: "text-decoration-none" do %>
             <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= Offer::IMAGES.sample %>)">
 

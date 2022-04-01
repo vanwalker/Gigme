@@ -1,11 +1,30 @@
-<div class="container d-flex">
+<%# <div class="container d-flex">
 
 <div class="container">
-<%= notice %>
-   <%= @booking.booking_start %>
-</div>
+<%# <%= notice %>
+   <%# <%= @booking.booking_start %>
+<%# </div>
 <div class="container">
   <%= @offer.title %>
-</div>
+<%# </div>
+</div> %>
 
+<div class="container py-5">
+  <h1>Mes Réservations</h1>
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <div class="row">
+          <div class="co-12 col-sm-6 col-md-4">
+            <div class="card-category mini-width" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= Offer::IMAGES.sample %>)">
+               <%# <%= link_to booking.place, booking_path(booking), class: "text-decoration-none" do %>
+               <p><%= @booking.place %></p>
+               <p><%= @booking.booking_start %></p>
+               <%# <p><%= @booking.user.first_name %>
+               <%# <p><%= @booking.user.last_name %>
+               <%# <%= @booking.offer.price.to_i %>
+               <%# <%= @booking.user.first_name %>
+               <%# <%= @booking.user.last_name %>
+            </div>
+        <%# <% end %>
+     </div>
+  </div>
 </div>
