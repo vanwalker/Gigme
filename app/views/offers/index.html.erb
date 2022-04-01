@@ -6,6 +6,14 @@
     <h3 class="typed-js" data-controller="typed-js"></h3>
   </div>
 </div>
+<%= form_tag offers_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a Band"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 <div class="container py-5">
   <div class="d-flex align-items-center justify-content-between mb-3">
     <div class="row">
