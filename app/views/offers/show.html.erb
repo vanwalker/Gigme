@@ -1,26 +1,34 @@
-<div class="container">
+<div class="container-md">
   <div class="card text-center">
-    <div class="card-header">
-      <h2><%= @offer.title %></h2>
+    <div class="card-header p-3 mb-2 bg-dark text-white row" >
       <%= notice %>
-      <% if  @offer.photo.attached? %>
+      <div class= "container col-lg-6  col-12">
+        <% if  @offer.photo.attached? %>
         <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill, class: 'center-img' %>
-      <%else %>
-        <%= image_tag "OIP.jpg", height: 300, width: 400, crop: :fill, class: 'center-img' %>
+        <%else %>
+        <%= image_tag "OIP.jpg", height: 300, width: 400, crop: :fill, class: 'center-img' 'card-img-top' %>
+        <% end %>
+      </div>
+        <div class= "container col-lg-6  col-12">
+          <h2 class= "mb-3"><%= @offer.title  %></h2>
+          <h3 class= "mb-3">Style de Musique : <%= @offer.music_style  %></h3>
+          <p class= "mb-3">Qui sommes-nous ? <%= @offer.description %></p>
+          <p class= "mb-3"><%= @offer.availability_start %></p>
+          <p class= "mb-3"><%= @offer.availability_end %></p>
+          <h4><%= @offer.price.to_i  %> € </h4>
+        </div>
+      </div>
+      <div class="justify-content-between">
+        <%= link_to new_offer_booking_path(@offer), class: 'no-text-decoration' do%>
+          <div class='btn-yours no-text-decoration'>Réserver ce groupe</div>
+        <% end %>
+        <%= link_to root_path, class: 'no-text-decoration' do%>
+          <div class='btn-yours no-text-decoration'>Accueil</div>
+        <% end %>
+        <%= link_to offer_path, class: 'no-text-decoration' do%>
+          <div class='btn-yours no-text-decoration'>Un autre groupe ? </div>
       <% end %>
     </div>
-    <div class="list-group-item"><%= @offer.description %></div>
-    <div class="list-group-item"><%= @offer.availability_start %></div>
-    <div class="list-group-item"><%= @offer.availability_end %></div>
-    <div class="list-group-item"><%= @offer.music_style %></div>
-    <div class="list-group-item"><%= @offer.price %></div>
-    <%= link_to new_offer_booking_path(@offer), class: 'no-text-decoration' do%>
-      <div class='btn-yours no-text-decoration'>Réserver ce groupe</div>
-    <% end %>
-    <%= link_to root_path, class: 'no-text-decoration' do%>
-      <div class='btn-yours no-text-decoration'>Accueil</div>
-    <% end %>
-
     <%# <%= link_to 'Create an offer', new_offer_path(), class: "btn btn-primary" %>
   </div>
 </div>
