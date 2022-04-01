@@ -1,3 +1,5 @@
+<div class = "backdrop">
+  <p>Vous avez crée 1 offre : </p>
 <div class="container-md">
       <%# <%= notice %>
   <div class="card text-center">
@@ -18,7 +20,7 @@
           <h4><%= @offer.price.to_i  %> € </h4>
         </div>
       </div>
-      <div class="justify-content-between">
+      <div class="justify-content-between ">
         <%= link_to new_offer_booking_path(@offer), class: 'no-text-decoration' do%>
           <div class='btn-yours no-text-decoration'>Réserver ce groupe</div>
         <% end %>
@@ -31,5 +33,6 @@
     </div>
     <%# <%= link_to 'Create an offer', new_offer_path(), class: "btn btn-primary" %>
   </div>
+</div>
 </div>
 </div>

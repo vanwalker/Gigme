@@ -4,14 +4,15 @@ body {
   // text-align: ;
 }
 
-.routing-page {
-  height: 600px;
+.routing-page{
+  height: 200px;
+  width: 100%;
 }
 
 .routes {
   height: 100%;
-  background-image: image-url("GIGMElogo.png");
-  background-position: center;
+  // background-image: image-url("GIGMElogo.png");
+  // background-position: center;
   // justify-content: space-between;
   margin-top: 4%;
   padding-block: 25%;
@@ -21,8 +22,10 @@ body {
 .wrapper{
   position: relative;
   height: 100%;
+  width: 100%;
   background-image: image-url("GIGMElogo.png");
-  top: 50%;
+  background-position: center;
+  top: 70px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -93,14 +96,15 @@ body {
 }
 
 footer {
-  position: sticky;
+  position: relative;
   bottom:0;
 }
 
-.container{
+.container {
   padding-right: var(--bs-gutter-x, 8.75rem);
   padding-left: var(--bs-gutter-x, 8.75rem);
   margin: 30px auto;
+  width: 1170px;
 }
 
 .logofont{
