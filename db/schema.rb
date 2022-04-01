@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_31_115013) do
+ActiveRecord::Schema.define(version: 2022_03_31_165219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 2022_03_31_115013) do
     t.date "booking_start"
     t.date "booking_end"
     t.string "place"
-    t.float "price"
     t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -62,11 +61,9 @@ ActiveRecord::Schema.define(version: 2022_03_31_115013) do
     t.text "description"
     t.date "availability_start"
     t.float "price"
-    t.string "place"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "event"
     t.string "music_style"
     t.date "availability_end"
     t.index ["user_id"], name: "index_offers_on_user_id"
