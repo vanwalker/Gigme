@@ -5,7 +5,11 @@
       <li class="list-group-item"><%= @user.last_name %></li>
       <li class="list-group-item"><%= @user.email %></li>
   </ul>
+  <div class = "d-flex">
   <div class="text-center">
-    <%= link_to 'Créer ma fiche produit', new_offer_path(), class: "btn btn-primary"%>
+    <%= link_to 'Créer ma fiche produit', new_offer_path(), class: "btn"%>
+    <%= link_to 'Mettre à jour ma fiche produit', edit_offer_path(), class: "btn"%>
+  </div>
+
   </div>
 </div>
