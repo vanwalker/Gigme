@@ -6,7 +6,7 @@
         <% if  @offer.photo.attached? %>
         <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill, class: 'center-img' %>
         <%else %>
-        <%= image_tag "OIP.jpg", height: 300, width: 400, crop: :fill, class: 'center-img' 'card-img-top' %>
+        <%= image_tag Offer::IMAGES.sample, height: 300, width: 400, crop: :fill, class: 'center-img' 'card-img-top' %>
         <% end %>
       </div>
         <div class= "container col-lg-6  col-12">
