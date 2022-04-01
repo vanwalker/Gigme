@@ -10,16 +10,17 @@
         <% if current_user.musician == true %>
         <%= link_to 'Créer ma fiche produit', new_offer_path(), class: "btn"%>
         <%= link_to 'Mettre à jour ma fiche produit', edit_offer_path(), class: "btn"%>
-        <% else %>
-        <%= link_to 'Mes réservations', bookings_path(), class: "btn"%>
-        <% end %>
-     </div>
         <div class = "card">
           <h5>Votre offre à ce jour :</h5>
            <% if current_user.offer != nil %>
             <h2><%= @offer.title %></h2>
               <%= render 'offers/card', offer: @offer %>
           <% end %>
+        <% else %>
+        <%= link_to 'Mes réservations', bookings_path(), class: "btn"%>
+        <% end %>
+     </div>
+
         </div>
     </div>
 </div>
