@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # before_action :set_user, only: [:show]
   # set callbacks and authentificator! etc etc
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   # before_action :set_user, only: [:show]
 
   def show
