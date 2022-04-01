@@ -1,17 +1,19 @@
-<div class = "backdrop">
+<div class = "container">
   <p>Vous avez crée 1 offre : </p>
-<div class="container-md">
-      <%# <%= notice %>
+
+<div class="place-md">
+      <%= notice %>
+
   <div class="card text-center">
     <div class="card-header p-3 mb-2 bg-dark text-white row" >
-      <div class= "container col-lg-6  col-12">
+      <div class= "place col-lg-6  col-12">
         <% if  @offer.photo.attached? %>
         <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill, class: 'center-img' %>
         <%else %>
         <%= image_tag Offer::IMAGES.sample, height: 300, width: 400, crop: :fill, class: 'center-img' 'card-img-top' %>
         <% end %>
       </div>
-        <div class= "container col-lg-6  col-12">
+        <div class= "place col-lg-6  col-12">
           <h2 class= "mb-3"><%= @offer.title  %></h2>
           <h3 class= "mb-3">Style de Musique : <%= @offer.music_style  %></h3>
           <p class= "mb-3">Qui sommes-nous ? <%= @offer.description %></p>
