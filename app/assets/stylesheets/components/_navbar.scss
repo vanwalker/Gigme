@@ -7,6 +7,10 @@
   flex-grow: 0;
 }
 
+.navcontain {
+  position: sticky;
+}
+
 i {
   &:hover {
     color: $yellow;
