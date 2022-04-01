@@ -3,7 +3,7 @@
       <div class="g-col-3 g-start-2">
         <div class="card-header text-center">
           <h2><%= @offer.title %></h2>
-          <%= notice %>
+          <%# <%= notice %>
           <% if  @offer.photo.attached? %>
             <%= cl_image_tag @offer.photo.key, height: 150, width: 200, crop: :fill %>
           <%else %>
@@ -15,7 +15,7 @@
           <p><%= @offer.price.to_i %> € </p>
         </div>
         <br>
-          <%= notice %>
+          <%# <%= notice %>
         <br>
       </div>
     </div>
